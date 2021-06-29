@@ -1,0 +1,33 @@
+// COLOR VARIABLES
+$color-primary-red: hsl(0, 100%, 74%);
+$color-primary-green: hsl(154, 59%, 51%);
+
+$color-accent-blue: hsl(248, 32%, 49%);
+
+$color-neutral-dark-blue: hsl(249, 10%, 26%);
+$color-neutral-grayish-blue: hsl(246, 25%, 77%);
+
+// FONT VARIABLES
+$font-primary: "Poppins", sans-serif;
+
+// RESPONSIVE BREAKSPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+}
