@@ -17,7 +17,7 @@
       sizes="32x32"
       href="src/img/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="src/sass/main.scss" />
+    <link rel="stylesheet" href="src/css/style.css" />
     <script defer src="src/js/script.js"></script>
 
     <title>Frontend Mentor | Intro component with sign up form</title>
@@ -34,13 +34,115 @@
     </style> -->
   </head>
   <body>
-    <footer>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__heading-1">Learn to code by watching others</h1>
+        <p class="header__text">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </header>
+
+      <!-- //////////////////////////////////////////////////// End of header/ //////////////////////////////////////////////////// -->
+
+      <main class="main">
+        <div class="pricing">
+          <span class="pricing__free">Try it free 7 days</span> &nbsp;then
+          $20/mo. thereafter
+        </div>
+
+        <form action="#" class="form">
+          <div class="form__group">
+            <input
+              type="text"
+              id="name"
+              class="form__input"
+              placeholder="First Name"
+              required
+            />
+            <!-- <label for="name" class="form__label"></label> -->
+            <svg class="form__icon">
+              <use
+                xlink:href="src/img/sprite.svg#icon-exclamation-circle"
+              ></use>
+            </svg>
+            <p class="form__error">First name cannot be empty</p>
+          </div>
+
+          <div class="form__group">
+            <input
+              type="text"
+              id="last-name"
+              class="form__input"
+              placeholder="Last Name"
+              required
+            />
+            <!-- <label for="last-name" class="form__label"></label> -->
+            <svg class="form__icon">
+              <use
+                xlink:href="src/img/sprite.svg#icon-exclamation-circle"
+              ></use>
+            </svg>
+            <p class="form__error">Last name cannot be empty</p>
+          </div>
+
+          <div class="form__group">
+            <input
+              type="email"
+              id="email"
+              class="form__input"
+              placeholder="Email Address"
+              required
+            />
+            <!-- <label for="email" class="form__label"></label> -->
+            <svg class="form__icon">
+              <use
+                xlink:href="src/img/sprite.svg#icon-exclamation-circle"
+              ></use>
+            </svg>
+            <p class="form__error">Looks like this is not an email</p>
+          </div>
+
+          <div class="form__group">
+            <input
+              type="password"
+              id="pass"
+              class="form__input"
+              placeholder="Password"
+              required
+            />
+            <!-- <label for="pass" class="form__label"></label> -->
+            <svg class="form__icon">
+              <use
+                xlink:href="src/img/sprite.svg#icon-exclamation-circle"
+              ></use>
+            </svg>
+            <p class="form__error">Password cannot be empty</p>
+          </div>
+          <input
+            type="submit"
+            value="Claim your free trial"
+            class="form__btn"
+          />
+          <!-- <button class="form__btn">Claim your free trial</button> -->
+          <p class="form__policy">
+            By clicking the button you are agreeing to our
+            <span class="form__term">Terms and Services</span>
+          </p>
+        </form>
+      </main>
+    </div>
+
+    <!-- //////////////////////////////////////////////////// End of main/ //////////////////////////////////////////////////// -->
+
+    <!-- <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Erfan Naseri</a>.
       </p>
-    </footer>
+    </footer> -->
   </body>
 </html>
