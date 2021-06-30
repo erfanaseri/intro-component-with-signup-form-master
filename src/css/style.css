@@ -8,3 +8,134 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(../img/bg-intro-desktop.png);
+  background-color: #ff7a7a;
+  background-size: cover;
+  font-size: 1.6rem; }
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(56.5rem, 1fr));
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center; }
+
+.header {
+  color: #fff;
+  padding: 5rem;
+  max-width: 70rem; }
+  @media only screen and (max-width: 56.4em) {
+    .header {
+      text-align: center; } }
+  .header__heading-1 {
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 25em) {
+      .header__heading-1 {
+        font-size: 3.5rem; } }
+    @media only screen and (max-width: 21.875em) {
+      .header__heading-1 {
+        max-width: 80vw;
+        margin: 0 auto; } }
+  @media only screen and (max-width: 25em) {
+    .header__text {
+      width: 40rem;
+      margin: 0 auto; } }
+  @media only screen and (max-width: 21.875em) {
+    .header__text {
+      max-width: 80vw;
+      margin: 0 auto; } }
+
+.main {
+  display: grid;
+  row-gap: 2rem;
+  justify-items: center; }
+
+.pricing {
+  color: #fff;
+  background-color: #6055a5;
+  padding: 1.5rem 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.7rem rgba(0, 0, 0, 0.1);
+  text-align: center; }
+  .pricing__free {
+    font-weight: 800; }
+  @media only screen and (max-width: 21.875em) {
+    .pricing {
+      max-width: 80vw; } }
+
+.form {
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 1rem;
+  display: grid;
+  box-shadow: 0 1rem rgba(0, 0, 0, 0.1);
+  row-gap: 1rem; }
+  @media only screen and (max-width: 21.875em) {
+    .form {
+      max-width: 80vw; } }
+  .form__group {
+    border-radius: 1rem;
+    position: relative; }
+  .form__input {
+    height: 5rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #b9b6d3;
+    padding: 2rem;
+    font-family: inherit; }
+    .form__input:focus {
+      border: 2px solid #3e3c49;
+      outline: none;
+      font-weight: 500; }
+    .form__input:focus:invalid {
+      border: 2px solid #ff7a7a;
+      outline: none; }
+  .form__input:focus:invalid .form__btn:active {
+    background-color: red; }
+  .form__error {
+    color: #ff7a7a;
+    font-size: 1rem;
+    font-style: italic;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 500; }
+  .form__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #ff7a7a;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem; }
+  .form__btn {
+    font-family: inherit;
+    font-size: inherit;
+    color: #fff;
+    background-color: #38cc8c;
+    border: none;
+    height: 5.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0.5rem rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: all 0.2s; }
+    .form__btn:active {
+      transform: translateY(2px); }
+  .form__policy {
+    font-size: 1rem;
+    color: #b9b6d3;
+    text-align: center;
+    margin-top: 1rem; }
+  .form__term {
+    color: #ff7a7a; }

@@ -2,21 +2,23 @@
   "name": "intro-component-with-signup-form-master",
   "version": "1.0.0",
   "description": "Frontend Mentor Newbie challenge done by sass and js",
-  "default": "index.html",
+  "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.prefix.css",
+    "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "author": "Erfan Naseri",
+  "author": "Erfan",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-beta.2",
-    "parcel": "^2.0.0-beta.1",
-    "sass": "^1.26.10"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "fractional": "^1.0.0",
-    "regenerator-runtime": "^0.13.7"
+    "autoprefixer": "^10.2.6",
+    "concat": "^1.0.3",
+    "node-sass": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.3.1"
   }
 }
