@@ -108,14 +108,27 @@ body {
     font-style: italic;
     display: flex;
     justify-content: flex-end;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-top: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.1s; }
+    .form__error--active {
+      visibility: visible;
+      opacity: 1; }
   .form__icon {
     width: 2rem;
     height: 2rem;
     fill: #ff7a7a;
     position: absolute;
     right: 2rem;
-    top: 1.5rem; }
+    top: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.1s; }
+    .form__icon--active {
+      visibility: visible;
+      opacity: 1; }
   .form__btn {
     font-family: inherit;
     font-size: inherit;
@@ -130,6 +143,8 @@ body {
     cursor: pointer;
     backface-visibility: hidden;
     transition: all 0.2s; }
+    .form__btn--active {
+      background-color: #61d6a3; }
     .form__btn:active {
       transform: translateY(2px); }
   .form__policy {
